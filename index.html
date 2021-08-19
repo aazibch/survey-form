@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Code Movement Survey</title>
+</head>
+<body>
+    <div class="container my-5">
+        <header class="text-center mt-3">
+            <h1 id="title" class="h2 mb-3">Code Movement Survey</h1>
+        </header>
+        <p id="description" class="text-center mb-1">Please take a few moments to let us know what you think about our service.</p>
+        <p class="text-center text-danger"><small>Fields marked with an asterisk (*) are required.</small></p>
+        <form id="survey-form" class="mb-2">
+                <div class="form-group row">
+                    <label id="name-label" class="col-md-5 col-form-label text-md-right" for="name"><span class="text-danger">*</span> Name:</label>
+                    <div class="col-md-7">
+                        <input id="name" class="form-control" type="text" placeholder="What's your name?" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label id="number-label" class="col-md-5 col-form-label text-md-right" for="number"><span class="text-danger">*</span> Age:</label>
+                    <div class="col-md-7">
+                        <input id="number" class="form-control" type="number" placeholder="How old are you?" required min="13" max="100">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-5 col-form-label text-md-right" for="dropdown">Sex:</label>
+                    <div class="col-md-7">
+                        <select id="dropdown" class="form-control">
+                            <option class="d-none" disabled selected>Select an option</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Non-binary</option>
+                            <option>I'd rather not say</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label id="email-label" class="col-md-5 col-form-label text-md-right" for="email"><span class="text-danger">*</span> Email:</label>
+                    <div class="col-md-7">
+                        <input id="email" class="form-control" type="email" placeholder="What's your email address?" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-5 col-form-label text-md-right" for="role-options">What do you do?</label>
+                    <div class="col-md-7">
+                        <select id="role-options" class="form-control">
+                            <option class="d-none" disabled selected>Select an option</option>
+                            <option>Study</option>
+                            <option>Full-time Job</option>
+                            <option>Other</option>
+                            <option>I'd rather not say</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <p class="col-md-5 col-form-label text-md-right"><span class="text-danger">*</span> What do you think of Code Movement?</p>
+                    <div class="col-md-7">
+                        <div class="form-check">
+                            <input id="rating-good" class="form-check-input" type="radio" name="rating" value="Good" required>
+                            <label class="form-check-label" for="rating-good">It's good.</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="rating-fine" class="form-check-input" type="radio" name="rating" value="Fine" required>
+                            <label class="form-check-label" for="rating-fine">It's fine.</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="rating-bad" class="form-check-input" type="radio" name="rating" value="Bad" required>
+                            <label class="form-check-label" for="rating-bad">I don't like it.</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <p class="col-md-5 col-form-label text-md-right">Which areas should be improved?</p>
+                    <div class="col-md-7">
+                        <div class="form-check">
+                            <input id="improved-lectures" class="form-check-input" type="checkbox" value="Lectures">
+                            <label class="form-check-label" for="improved-lectures">
+                                Lectures
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input id="improved-exercises" class="form-check-input" type="checkbox" value="Exercises">
+                            <label class="form-check-label" for="improved-exercises">
+                                Exercises
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input id="improved-forums" class="form-check-input" type="checkbox" value="Discussion Forums">
+                            <label class="form-check-label" for="improved-forums">
+                                Discussion Forums
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-5 col-form-label text-md-right" for="comments">Any further comments or suggestion?</label>
+                    <div class="col-md-7">
+                        <textarea id="comments" class="form-control"></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit" class="btn btn-primary float-right">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
